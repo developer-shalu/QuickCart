@@ -1,54 +1,72 @@
 import React from "react";
-import { assets } from "@/assets/assets";
-import Image from "next/image";
+
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-16 lg:px-32 gap-10 py-14 border-b border-gray-500/30 text-gray-500">
-        <div className="w-4/5">
-          <Image className="w-28 md:w-32" src={assets.logo} alt="logo" />
-          <p className="mt-6 text-sm">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+    <footer className="bg-gray-900 text-gray-300 pt-10 mt-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+        {/* Company Info */}
+        <div>
+          <h2 className="text-2xl font-bold text-white mb-4">MrtSports</h2>
+          <p className="text-sm">
+            Your one-stop shop for sports gear, shoes, and fitness essentials.
+            Quality products, fast delivery, and best prices.
           </p>
         </div>
 
-        <div className="w-1/2 flex items-center justify-start md:justify-center">
-          <div>
-            <h2 className="font-medium text-gray-900 mb-5">Company</h2>
-            <ul className="text-sm space-y-2">
-              <li>
-                <a className="hover:underline transition" href="#">Home</a>
-              </li>
-              <li>
-                <a className="hover:underline transition" href="#">About us</a>
-              </li>
-              <li>
-                <a className="hover:underline transition" href="#">Contact us</a>
-              </li>
-              <li>
-                <a className="hover:underline transition" href="#">Privacy policy</a>
-              </li>
-            </ul>
-          </div>
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
+          <ul className="space-y-2">
+            <li><a href="/" className="hover:text-white transition">Home</a></li>
+            <li><a href="/about" className="hover:text-white transition">About</a></li>
+            <li><a href="/products" className="hover:text-white transition">Products</a></li>
+            <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
+            <li><a href="/help" className="hover:text-white transition">Help Center</a></li>
+          </ul>
         </div>
 
-        <div className="w-1/2 flex items-start justify-start md:justify-center">
-          <div>
-            <h2 className="font-medium text-gray-900 mb-5">Get in touch</h2>
-            <div className="text-sm space-y-2">
-              <p>+1-234-567-890</p>
-              <p>contact@greatstack.dev</p>
-            </div>
+        {/* Customer Support */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">Customer Support</h3>
+          <ul className="space-y-2">
+            <li><a href="/returns" className="hover:text-white transition">Returns & Refunds</a></li>
+            <li><a href="/shipping" className="hover:text-white transition">Shipping Policy</a></li>
+            <li><a href="/privacy" className="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="/terms" className="hover:text-white transition">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        {/* Newsletter + Social */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-3">Join Our Newsletter</h3>
+          <p className="text-sm mb-3">Get the latest deals and updates.</p>
+          <div className="flex">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full px-3 py-2 rounded-l-md focus:outline-none text-black"
+            />
+            <button className="bg-blue-600 px-4 py-2 rounded-r-md text-white hover:bg-blue-700 transition">
+              Subscribe
+            </button>
           </div>
+
+          {/* Social Media Icons */}
+          {/* <div className="flex space-x-4 mt-4">
+            <a href="#" className="hover:text-white"><FaFacebookF size={20} /></a>
+            <a href="#" className="hover:text-white"><FaInstagram size={20} /></a>
+            <a href="#" className="hover:text-white"><FaTwitter size={20} /></a>
+            <a href="#" className="hover:text-white"><FaYoutube size={20} /></a>
+          </div> */}
         </div>
       </div>
-      <p className="py-4 text-center text-xs md:text-sm">
-        Copyright 2025 © GreatStack.dev All Right Reserved.
-      </p>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-700 text-center py-4 mt-8 text-sm">
+        © {new Date().getFullYear()} MrtSports. All rights reserved.
+      </div>
     </footer>
   );
 };
